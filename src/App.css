@@ -55,3 +55,39 @@ body {
 .all-show {
   z-index: 10;
 }
+
+/* CARRITO DE COMPRAS */
+.cartIconContainer {
+  width: 130px;
+  margin: 10px auto;
+  display: block;
+  position: relative;
+}
+
+.cartIcon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.cartIconTotal {
+  background: red;
+  height: 22px;
+  width: 22px;
+  color: white;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  right: 26px;
+  font-size: 0.7em;
+}
+
+.cartIconContainer button {
+  margin: 10px auto;
+  width: 120px;
+  display: block;
+}
+/* CARRITO DE COMPRAS */
