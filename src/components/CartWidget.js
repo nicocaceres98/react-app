@@ -1,9 +1,9 @@
 const Cart = ({ children }) => {
   return (
     <div>
-      <div class="cartIconContainer">
-        <img src="https://i.imgur.com/GELbsOW.png" class="cartIcon" />
-        <div class="cartIconTotal">10</div>
+      <div className="cartIconContainer">
+        <img src="https://i.imgur.com/GELbsOW.png" className="cartIcon" />
+        <div className="cartIconTotal">10</div>
         <div id="cartIcon"></div>
         {/* <button>Add to cart</button> */}
       </div>
