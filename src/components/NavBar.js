@@ -1,67 +1,37 @@
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./navbar.css";
 
-function NavBar() {
+export const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-red navbar-dark">
-      <div className="wrapper"></div>
-      <div className="container-fluid all-show">
-        <a className="navbar-brand" href="#">
-          E-Commerce <i className="fa fa-codepen"></i>
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Inicio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Productos
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Nosotros
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Ayuda
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                contacto
-              </a>
-            </li>
-          </ul>
-          <div>
-            <CartWidget></CartWidget>
-          </div>
+    <div className="container">
+      <nav className="nav">
+        <div className="nav__brand">
+          <NavLink className="nav__link" to="/">
+            MiMarca
+          </NavLink>
         </div>
-      </div>
-    </nav>
+        <ul className="nav__list">
+          <li>
+            <NavLink className="nav__link" to="/categoria/celulares">
+              Categoria 1
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav__link" to="/categoria/relojes">
+              Categoria 2
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav__link" to="cart">
+              <CartWidget />
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
-}
-
-function list() {
-  return <ItemListContainer></ItemListContainer>;
-}
+};
 
 export default NavBar;
