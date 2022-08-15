@@ -1,9 +1,14 @@
 import "./ItemDetail.css";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import ItemCount from "./ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 function ItemDetail({ data }) {
+  const [goToCart, setGoToCart] = useState(false);
+
+  const onAdd = (quantity) => {
+    setGoToCart(true);
+  };
   return (
     <div className="toparticulo">
       <div className="card">
@@ -12,9 +17,11 @@ function ItemDetail({ data }) {
           <h5 className="card-title">{data.title}</h5>
           <p className="card-text">{data.desc}</p>
           <p class="card-text fs-2">{data.precio}</p>
-          <Link to={"/ItemCount"} className="btn btn-primary">
-            <ItemCount></ItemCount>
-          </Link>
+          {goToCart ? (
+            <Link to="/cart">Finalizar compra</Link>
+          ) : (
+            <ItemCount initial={1} stock={5} onAdd={onAdd} />
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ItemCount from "./ItemCount/ItemCount";
 import ItemList from "./itemList/ItemList";
 import Title from "./Title";
 import { useParams } from "react-router-dom";
@@ -37,7 +36,7 @@ export const ItemListContainer = ({ texto }) => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(product);
-      }, 3000);
+      }, 1000);
     });
     if (categoriaId) {
       getData.then((res) =>
@@ -48,13 +47,9 @@ export const ItemListContainer = ({ texto }) => {
     }
   }, [categoriaId]);
 
-  const onAdd = (quantity) => {
-    console.log(`Compraste ${quantity} unidades`);
-  };
   return (
     <>
       <Title greeting={texto} />
-      <ItemCount initial={1} stock={5} onAdd={onAdd} />
       <ItemList data={data} />
     </>
   );
