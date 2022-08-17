@@ -1,7 +1,7 @@
 import React from "react";
+
 import "./itemlist.css";
 import { Link } from "react-router-dom";
-import "./itemlist.css";
 
 const Item = ({ info }) => {
   return (
@@ -11,7 +11,7 @@ const Item = ({ info }) => {
         <div className="card-body">
           <h5 className="card-title">{info.nombre}</h5>
           <p className="card-text">{info.desc}</p>
-          <p class="card-text fs-2">{info.precio}</p>
+          <p className="card-text fs-2">{info.precio}</p>
           <Link to={`/detalle/${info.id}`} className="btn btn-primary">
             Detalle
           </Link>

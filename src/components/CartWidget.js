@@ -1,15 +1,15 @@
-const Cart = ({ children }) => {
+import React from "react";
+
+export const CartWidget = () => {
   return (
     <div>
       <div className="cartIconContainer">
         <img src="https://i.imgur.com/GELbsOW.png" className="cartIcon" />
-        <div className="cartIconTotal">10</div>
+        <div className="cartIconTotal">0</div>
         <div id="cartIcon"></div>
-        {/* <button>Add to cart</button> */}
       </div>
-      {children}
     </div>
   );
 };
 
-export default Cart;
+export default CartWidget;
