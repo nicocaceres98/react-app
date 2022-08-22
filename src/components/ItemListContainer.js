@@ -9,21 +9,21 @@ const product = [
     img: "https://xiaomicordoba.com/wp-content/uploads/2021/06/Xiaomi-Redmi-Note-10-Pro.jpg",
     nombre: "Xiaomi Redmi Note 11",
     category: "celulares",
-    precio: "$127.000",
+    precio: "127000",
   },
   {
     id: 2,
     img: "https://xiaomicordoba.com/wp-content/uploads/2022/07/Haylou-rs4.jpg",
     nombre: "Reloj Haylou Rs4 Xiaomi ",
     category: "relojes",
-    precio: "$13.500",
+    precio: "13500",
   },
   {
     id: 3,
     img: "https://xiaomicordoba.com/wp-content/uploads/2021/05/redmi-9c.jpg",
     nombre: "Xiaomi Redmi 9C",
     category: "celulares",
-    precio: "$85.000",
+    precio: "85000",
   },
 ];
 
