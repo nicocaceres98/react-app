@@ -1,7 +1,6 @@
-.toparticulo {
+.toparticulo2 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: 50px;
   padding-right: 50px;
   width: 100%;

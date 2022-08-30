@@ -1,57 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
 
 body {
-  background-color: #eee;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
-.navbar-nav > li > a {
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 30px 15px;
+}
+
+.menu a {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
   text-transform: uppercase;
-  font-size: 12px;
-  margin-right: 20px;
-  color: #fff;
+  position: relative;
 }
 
-.navbar-toggler {
-  padding: 0.2rem 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid white;
-}
-
-.nav-link {
-  color: #fff !important;
-}
-
-.wrapper {
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  background-color: #280c65;
-  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
-  transition: 1s all;
-}
-
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  font-family: "Allerta Stencil", sans-serif;
-  margin-bottom: 4px;
-  font-size: 27px;
-}
-
-.navbar-red:hover .wrapper {
-  clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
-}
-
-.navbar-brand:hover {
-  color: rgb(255, 255, 255);
-}
-
-.navbar-red {
-  background-color: #5302b6;
-  color: #fff;
-}
-
-.all-show {
-  z-index: 10;
+@media (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .menu li {
+    padding: 0;
+  }
+  .menu a {
+    color: #000000;
+    line-height: 60px;
+  }
+  .navbar {
+    display: none;
+  }
 }

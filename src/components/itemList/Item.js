@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Item = ({ info }) => {
   return (
-    <div className="toparticulo">
-      <div className="card">
+    <div className="toparticulo2">
+      <nav className="card">
         <img className="card-img-top" src={info.img} alt="" />
         <div className="card-body">
           <h5 className="card-title">{info.nombre}</h5>
@@ -16,7 +16,7 @@ const Item = ({ info }) => {
             Detalle
           </Link>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };
